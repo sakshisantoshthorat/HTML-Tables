@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Table with Merged Cells</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 500px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #d86a2f;
+        }
+
+        @media screen and (max-width: 600px) {
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Grades Table(Responsive + Merged Cells)</h2>
+
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Alice</td>
+            <td>Math</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td colspan="2">Enrolled in History and Geography (Grades Pending)</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>History</td>
+            <td>A-</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
